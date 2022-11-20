@@ -6,5 +6,6 @@
 (define-key *global-keymap* "Return" 'lem.language-mode:newline-and-indent)
 
 ;;; Variable config
-(setf *scroll-recenter-p* nil)
-(setf (variable-value 'lem.line-numbers:line-numbers :global) t)
+;(setf *scroll-recenter-p* nil)
+;(setf (variable-value 'lem.line-numbers:line-numbers :global) t)
+(setf (variable-value 'lem-lisp-mode.paren-coloring:paren-coloring :global) t)
