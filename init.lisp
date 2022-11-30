@@ -2,6 +2,12 @@
   (:use :cl :lem))
 (in-package :lem-init)
 
+;;; Theme
+(define-color-theme "custom" ("emacs-dark")
+  (:inactive-window-background nil))
+
+(load-theme "custom")
+
 ;;; Key mapping
 (defparameter *custom-keymap*
   '(("Return" . lem.language-mode:newline-and-indent)
