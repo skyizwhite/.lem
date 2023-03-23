@@ -21,7 +21,7 @@
 
 ;;; Key mapping
 (defparameter *custom-keymap*
-  '(("Return" . lem.language-mode:newline-and-indent)
+  '(("Return" . lem/language-mode:newline-and-indent)
     ; workaround mapping for bugs
     ("Ȭ" . lem-paredit-mode:paredit-slurp)
     ("ȝ" . lem-paredit-mode:paredit-barf)))
@@ -30,8 +30,8 @@
       :do (define-key *global-keymap* key cmd))
 
 ;;; Variable config
-(setf *scroll-recenter-p* nil)
-(setf (variable-value 'lem.line-numbers:line-numbers :global) t)
+(setf *scroll-recenter-p* t)
+(setf (variable-value 'lem/line-numbers:line-numbers :global) t)
 (setf (variable-value 'lem-lisp-mode.paren-coloring:paren-coloring :global) t)
 
 ;;; Setup Paredit
