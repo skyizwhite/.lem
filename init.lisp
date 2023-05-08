@@ -15,7 +15,7 @@
 ;;; Variable config
 (setf *scroll-recenter-p* t)
 (setf (variable-value 'lem/line-numbers:line-numbers :global) t)
-(setf (variable-value 'lem-lisp-mode.paren-coloring:paren-coloring :global) t)
+(setf (variable-value 'lem-lisp-mode/paren-coloring:paren-coloring :global) t)
 
 ;;; Setup Paredit
 (lem:add-hook lem:*find-file-hook*
