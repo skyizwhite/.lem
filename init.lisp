@@ -2,15 +2,16 @@
   (:use :cl :lem))
 (in-package :lem-init)
 
-;;; Key mapping
-(defparameter *custom-keymap*
-  '(("Return" . lem/language-mode:newline-and-indent)
-    ; workaround mapping for bugs
-    ("Ȭ" . lem-paredit-mode:paredit-slurp)
-    ("ȝ" . lem-paredit-mode:paredit-barf)))
-
-(loop :for (key . cmd) :in *custom-keymap*
-      :do (define-key *global-keymap* key cmd))
+;;; Key bindings
+;; workaround
+(define-key *global-keymap* "ȸ" 'scroll-up)         ; C-Up
+(define-key *global-keymap* "ȏ" 'scroll-down)       ; C-Down
+(define-key *global-keymap* "Ȳ" 'forward-word)      ; C-Right
+(define-key lem-paredit-mode:*paredit-mode-keymap*
+  "Ȳ" 'lem-paredit-mode:paredit-slurp)
+(define-key *global-keymap* "ȣ" 'previous-word)     ; C-Left
+(define-key lem-paredit-mode:*paredit-mode-keymap*
+  "ȣ" 'lem-paredit-mode:paredit-barf)
 
 ;;; Variable config
 (setf *scroll-recenter-p* t)
