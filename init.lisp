@@ -2,6 +2,9 @@
   (:use :cl :lem))
 (in-package :lem-init)
 
+#+lem-sdl2
+(lem-sdl2:set-keyboard-layout :jis)
+
 ;;; Key bindings
 ;; workaround
 (define-key *global-keymap* "ȸ" 'scroll-up)         ; C-Up
