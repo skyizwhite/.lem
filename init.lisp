@@ -19,7 +19,8 @@
   ("ȸ" 'scroll-up)
   ("ȏ" 'scroll-down)
   ("Ȳ" 'forward-word)
-  ("ȣ" 'previous-word))
+  ("ȣ" 'previous-word)
+  ("C-t" 'lem-terminal/terminal-mode::terminal))
 
 (define-keys lem-lisp-mode:*lisp-mode-keymap*
   ("C-l s" 'lem-lisp-mode:slime)
