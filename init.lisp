@@ -25,7 +25,8 @@
 (define-keys lem-lisp-mode:*lisp-mode-keymap*
   ("C-l s" 'lem-lisp-mode:slime)
   ("C-l q" 'slime-qlot-exec)
-  ("C-l r" 'lem-lisp-mode:slime-restart))
+  ("C-l r" 'lem-lisp-mode:slime-restart)
+  ("C-l f" 'format-current-buffer))
 
 (define-keys lem-paredit-mode:*paredit-mode-keymap*
   ("Ȳ" 'lem-paredit-mode:paredit-slurp)
